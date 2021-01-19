@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -x
 unset GIT_INDEX_FILE
 _/rebuild-index
 git add README.md
