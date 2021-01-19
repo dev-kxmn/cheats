@@ -1,8 +1,8 @@
 #!/bin/sh
 
+unset GIT_INDEX_FILE
 _/rebuild-index
 git add README.md
-git commit --amend -C HEAD --no-verify
+git commit -a --amend -C HEAD --no-verify
 echo 'Enter to return to prompt'
-
 exit
