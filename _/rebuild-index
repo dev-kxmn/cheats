@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+CWD=$( realpath $(dirname $0)/.. )
+INDEX=${CWD}/README.md
+
+echo -e '# Cheatsheets\n' > $INDEX
+for file in $(find -type f -name "[a-z0-9]*.md" | sort); do
+	echo -e "* [${$(basename ${file})%%.*}](${file})"
+done >> $INDEX
