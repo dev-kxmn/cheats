@@ -1,6 +1,8 @@
 #!/bin/sh
 
-unset GIT_INDEX_FILE
 _/rebuild-index
 git add README.md
+git commit --amend -C HEAD --no-verify
+exit
+
 
